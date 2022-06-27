@@ -15,7 +15,18 @@ public class StringsAndThings {
      *           countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input){
-        return null;
+        String[] words = input.split(" ");
+        int counter = 0;
+        for(int i = 0; i < words.length; i++) {
+            if(words[i].charAt(words[i].length() - 1) == 'y' || words[i].charAt(words[i].length() - 1) == 'z'){
+                counter++;
+
+            }
+
+        }
+        return counter;
+
+
     }
 
     /**
@@ -51,7 +62,11 @@ public class StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
-        return null;
+        if(input.contains("gg")){
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
